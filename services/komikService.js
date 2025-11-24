@@ -18,7 +18,7 @@ async function createKomik(database, komikData, ) {
 }
 
 async function getAllKomiks(database) {
-    const komiks = await database.Komik.findAll();
+    const komik = await database.Komik.findAll();
     return komik.map(k =>{
         if (k.imageData) {
             k.imageData = k.imageData.toString('base64');

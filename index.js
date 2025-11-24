@@ -7,7 +7,7 @@ const PORT = 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/api', apiRoute);
+app.use('/api/v1', apiRoute);
 
 async function startServer() {
     await connectionbase();
